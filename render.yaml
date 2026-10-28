@@ -1,0 +1,15 @@
+# Render Blueprint for the Marx Research Connector.
+# Free Python web service. No secrets. A push to main deploys this service.
+services:
+  - type: web
+    name: marx-research-connector
+    runtime: python
+    plan: free
+    branch: main
+    autoDeployTrigger: commit
+    buildCommand: python -m compileall -q .
+    startCommand: python server.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: A2A_EVENTS_PATH
+        value: /tmp/a2a_events.jsonl

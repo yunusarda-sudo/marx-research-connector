@@ -1,0 +1,1 @@
+{"jsonrpc":"2.0","id":"t1","method":"SendMessage","params":{"message":{"messageId":"m-test-1","role":"ROLE_USER","parts":[{"text":"I'm researching BTC liquidity and Fed-driven market moves. Can you help me discover relevant analysis, and how would my agent connect via MCP?"}],"metadata":{"callerName":"local-test-client","test":true}}}}
