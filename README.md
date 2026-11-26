@@ -1,5 +1,7 @@
 # Marx Research Connector
 
+[![CI](https://github.com/yunusarda-sudo/marx-research-connector/actions/workflows/ci.yml/badge.svg)](https://github.com/yunusarda-sudo/marx-research-connector/actions/workflows/ci.yml)
+
 Small [A2A](https://a2a-protocol.org) agent for [Marx Finance](https://marx.finance). It runs on its own (including a Render free Web Service) and answers discovery questions by calling only the public, keyless read tools that back its card:
 
 - `search_feed`
@@ -51,6 +53,12 @@ Smoke test (starts the server, checks both cards, `/healthz`, and one live `Send
 
 ```bash
 python3 smoke_test.py
+```
+
+To run offline verification without live network calls (as executed in CI):
+
+```bash
+python3 scripts/ci_check.py
 ```
 
 That call uses Marx's public read tools only.
